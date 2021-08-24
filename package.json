@@ -24,7 +24,7 @@
       "typeorm": "0.2.37"
    },
    "scripts": {
-      "start": "node build/index.js",
+      "start": "node build/index.ts",
       "tsc": "tsc",
       "dev": "set debug=* && ts-node-dev --respawn --transpile-only ./src/index.ts"
    }
