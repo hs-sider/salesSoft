@@ -1,0 +1,24 @@
+{
+   "type": "mysql",
+   "host": "sql10.freemysqlhosting.net",
+   "port": 3306,
+   "username": "sql10432545",
+   "password": "t5xRePe9jd",
+   "database": "sql10432545",
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "src/entity/**/*.ts"
+   ],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   }
+}
