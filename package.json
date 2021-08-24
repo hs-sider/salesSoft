@@ -25,7 +25,8 @@
       "typescript": "^3.9.6"
    },
    "scripts": {
-      "start": "node ./build/index.js",
+      "start": "node ./dist/index.js",
+      "build": "tsc",
       "tsc": "tsc",
       "dev": "set debug=* && ts-node-dev --respawn --transpile-only ./src/index.ts"
    }
