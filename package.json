@@ -24,9 +24,8 @@
       "ts-node": "3.3.0"
    },
    "scripts": {
-      "start": "node build/index.ts",
+      "start": "ts-node src/index.ts",
       "tsc": "tsc",
       "dev": "set debug=* && ts-node-dev --respawn --transpile-only ./src/index.ts",
-      "postinstall": "npm run dev"
    }
 }
