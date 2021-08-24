@@ -5,6 +5,7 @@
          "es6",
          "dom"
       ],
+      "types": ["node"], 
       "target": "es5",
       "module": "commonjs",
       "moduleResolution": "node",
