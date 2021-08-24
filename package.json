@@ -26,6 +26,6 @@
    "scripts": {
       "start": "ts-node src/index.ts",
       "tsc": "tsc",
-      "dev": "set debug=* && ts-node-dev --respawn --transpile-only ./src/index.ts",
+      "dev": "set debug=* && ts-node-dev --respawn --transpile-only ./src/index.ts"
    }
 }
