@@ -26,6 +26,7 @@
    "scripts": {
       "start": "node build/index.ts",
       "tsc": "tsc",
-      "dev": "set debug=* && ts-node-dev --respawn --transpile-only ./src/index.ts"
+      "dev": "set debug=* && ts-node-dev --respawn --transpile-only ./src/index.ts",
+      "postinstall": "npm run build"
    }
 }
