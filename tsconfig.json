@@ -2,12 +2,10 @@
    "compilerOptions": {
       "lib": [
          "es5",
-         "es6"
+         "es6",
+         "dom"
       ],
       "target": "es5",
-      "types": [
-         "node"
-       ],
       "module": "commonjs",
       "moduleResolution": "node",
       "outDir": "./dist",
