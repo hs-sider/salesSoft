@@ -1,10 +1,10 @@
 {
    "type": "mysql",
-   "host": "localhost",
+   "host": "sql10.freemysqlhosting.net",
    "port": 3306,
-   "username": "root",
-   "password": "",
-   "database": "salesSoftDB",
+   "username": "sql10432545",
+   "password": "t5xRePe9jd",
+   "database": "sql10432545",
    "synchronize": true,
    "logging": false,
    "entities": [

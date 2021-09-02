@@ -22,7 +22,6 @@ export class UserController {
     };
 
     static getById = async (req: Request, res: Response) => {
-        // const {id: id} = req.params;
         const {id} = req.params;
         const userRepository = getRepository(User);
 
@@ -43,18 +42,14 @@ export class UserController {
         user.lastname = lastname;
         user.ci = ci;
         user.phonenumber = phonenumber;
-
         user.role = role;
 
-        // Validate
         const validationOpt = {validationError:{target: false, value: false}};
         const errors = await validate(user, validationOpt);
 
         if (errors.length > 0) {
             return res.status(400).json(errors);
         }
-        
-        // TODO: HASH PASSWORD
 
         const userRepository = getRepository(User);
         try{
@@ -69,7 +64,7 @@ export class UserController {
     static editUser = async (req: Request, res: Response) => {
         let user;
         const {id} = req.params;
-        const {username, role} = req.body;
+        const {username, name, lastname, ci, phonenumber, role} = req.body;
 
         const userRepository = getRepository(User);
 
@@ -81,6 +76,10 @@ export class UserController {
         }
 
         user.username = username;
+        user.name = name;
+        user.lastname = lastname;
+        user.ci = ci;
+        user.phonenumber = phonenumber;
         user.role = role;
 
         const validationOpt = {validationError:{target: false, value: false}};
@@ -89,8 +88,6 @@ export class UserController {
         if(errors.length > 0) {
             return res.status(400).json(errors);
         }
-
-        // Try to save user
 
         try {
             await userRepository.save(user);
@@ -111,7 +108,6 @@ export class UserController {
             return res.status(404).json({message: 'User not found'})
         }
 
-        // Remove user
         userRepository.delete(id);
         res.status(201).json({message: 'User deleted'})
     };
